@@ -1,0 +1,25 @@
+syntax = "proto3";
+package pb;
+
+option go_package = "/pb";
+
+message modDataLog {
+    string label = 1;
+    float decision = 2;
+}
+message modSecLog {
+    string name = 1;
+    string value = 2;
+}
+
+message modSecIntlRequest {
+    repeated modSecLog metrics = 1;
+}
+
+message modSecIntlResponse {
+    repeated modDataLog response = 1;
+}
+
+service modSecIntl {
+    rpc Detect(modSecIntlRequest) returns (modSecIntlResponse) {}
+}
