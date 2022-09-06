@@ -1,4 +1,4 @@
-# Web Attack Classification Engine (WACE)
+# WACE Roberta-based ML model and plugin
 
 The general objective of this project is to build machine
 learning-assisted web application firewall mechanisms for the
