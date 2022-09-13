@@ -57,7 +57,7 @@ class RobertaModelEncode:
         inicio = time.time();
         decision_pu = self.algorithm.decision_function(x_test_pu)
         self.timeDecision=time.time()-inicio
-        threshold = -0.02
+        threshold = -0.44
         if decision_pu <threshold:
             label="Attack"
         else:
@@ -79,7 +79,7 @@ class RobertaModelEncode:
         self.timeTokenize=time.time()-inicio
 
         inicio=time.time()
-        sentence = self.apply_bpe(sentence[:2000])
+        sentence = self.apply_bpe(sentence)
         self.timeApply_bpe=time.time()-inicio
         self.token=len(sentence)
 
