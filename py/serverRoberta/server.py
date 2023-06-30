@@ -55,7 +55,11 @@ class server:
             logging.info('time data eval ready %r ',time.time()-inicio) 
 
         out=[]
-        out.append(modDataLog(label=pred.label,decision=pred.decision))
+        if isinstance(pred, float):
+            decisionPred=pred
+        else:
+            decisionPred=pred.decision[0]
+        out.append(modDataLog(label=pred.label,decision=decisionPred))
         with open(self.dataBPE+"/dataTime.csv", 'a') as f:
             f.write(str(self.roberta.token)+","+str(self.roberta.timeTokenize)+","+str(self.roberta.timeApply_bpe)+","+str(self.roberta.timeObfuscate)+","+str(self.roberta.timeBinarize)+","+str(self.roberta.timeExtract_features)+","+str(self.roberta.timePredict)+","+str(self.roberta.timeDecision)+","+str(self.roberta.total)+"\n")
             f.close()
