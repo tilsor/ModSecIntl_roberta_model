@@ -22,9 +22,11 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
+      - name: move
+        run: >- 
+           cd py/
       - name: Install pypa/build
         run: >-
-          cd py/
           python3 -m
           pip install
           build
