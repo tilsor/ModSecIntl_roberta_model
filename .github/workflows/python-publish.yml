@@ -24,6 +24,7 @@ jobs:
           python-version: "3.x"
       - name: Install pypa/build
         run: >-
+          cd py/
           python3 -m
           pip install
           build
