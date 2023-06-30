@@ -6,6 +6,8 @@ setup(
    name='server-roberta',
    version='0.4',
    description='To classify, BPE, ROBERTA and SVM are used',
+   long_description_content_type="text/markdown",
+   long_description=README,
    author='Tilsor',
    author_email='tilsor@tilsor.com.uy',
    setup_requires='setuptools',
