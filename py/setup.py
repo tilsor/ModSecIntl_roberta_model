@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 base_dir = os.path.dirname(__file__)
 setup(
    name='server-roberta',
-   version='0.1',
+   version='0.3',
    description='To classify, BPE, ROBERTA and SVM are used',
    author='Tilsor',
    author_email='tilsor@tilsor.com.uy',
