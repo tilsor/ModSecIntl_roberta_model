@@ -31,7 +31,7 @@ jobs:
       - name: Build a binary wheel and a source tarball
         run: >-
           python3 -m
-          build
+          build py/
           --sdist
           --wheel
           --outdir dist/
